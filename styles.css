@@ -1,0 +1,34 @@
+html{
+    width:100%;
+    height: 100%;
+}
+
+body{
+    width:100%;
+    height: 100%;
+    background-color: rgba(221, 100, 14, 0.325);
+}
+
+#container{
+    width:100%;
+    height: 100%;
+   
+}
+
+button{
+    border-radius: 7px;
+}
+
+h1{
+    text-align: center;
+}
+
+.add-book{
+    background-color: rgb(222, 173, 109);
+    width: 18%;
+    height:45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
