@@ -19,7 +19,6 @@ closeFormBtn.addEventListener("click", function() {
   background.style.filter = 'blur(0px)';
 });
 
-
 const myLibrary = [];
 
 function Book() {
