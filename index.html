@@ -7,22 +7,25 @@
     <title>Personal Library</title>
 </head>
 <body>
-    <main id="container">
+    <main> 
         <h1>Personal Library</h1>
-        <div class="add-book-div"></div>
-            <div class="add-book">
-                <button class="add-button" type="button">Add Book</button>
+        <div id="container">
+            <div class="background">
+                <div class="add-book">
+                    <button id="add-button" type="button">Add Book</button>
+                </div>
             </div>
-        </div>
-        <div class="books-added">
-            
-            
-        </div>
-
-
-
+                <div id="book-details" class="book-details hidden">
+                    <input type="text" placeholder="Title">
+                    <input type="text" placeholder="Author">
+                    <input type="text" placeholder="Number of Pages">
+                    <input type="text">
+                    <button class="close-form"> Add</button>
+                </div>
+               
+            </div>
     </main>
-
+    
 <script src="./script.js"></script>   
 </body>
 </html>
