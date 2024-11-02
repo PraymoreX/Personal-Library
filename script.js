@@ -9,7 +9,7 @@ window.addEventListener("load", function(){
 
 addBook.addEventListener("click", function(){
   bookDetails.classList.add("book-details");
-  background.style.filter = 'blur(5px)';
+  background.style.filter = 'blur(3px)';
 
 });
 
@@ -18,7 +18,7 @@ closeFormBtn.addEventListener("click", function() {
   bookDetails.classList.remove("book-details"); 
   background.style.filter = 'blur(0px)';
 });
-
+ 
 const myLibrary = [];
 
 function Book() {
