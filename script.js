@@ -1,7 +1,8 @@
-let closeFormBtn = document.querySelector(".close-form");
+let submit = document.querySelector(".submit");
 let background = document.querySelector('.background');
 let bookDetails = document.querySelector("#book-details");
 let addBook = document.querySelector("#add-button");
+let cancelBtn = document.querySelector(".cancel");
 
 window.addEventListener("load", function(){
   bookDetails.classList.remove("book-details")
@@ -14,7 +15,7 @@ addBook.addEventListener("click", function(){
 });
 
 
-closeFormBtn.addEventListener("click", function() {
+cancelBtn.addEventListener("click", function() {
   bookDetails.classList.remove("book-details"); 
   background.style.filter = 'blur(0px)';
 });
