@@ -93,17 +93,19 @@ h1 {
     text-transform: uppercase;
 }
 
+
 .add-book {
-    background-color: rgb(222, 173, 109);
+    background-color: burlywood; /* Soft gray for a clean look */
     width: 18%;
     height: 45%;
+    border-radius: 20px; /* Rounded corners for a smoother appearance */
+    border:3px solid white;
     display: flex;
-    justify-content: center;
     align-items: center;
-    border-radius: 20px;
+    justify-content: center;
     margin: 20px 20px;
+    transition: transform 0.2s ease-in-out; /* Animation for a smoother interaction */
 }
-
 
 
 .hidden {
@@ -151,7 +153,7 @@ h1 {
     margin-top: 5px;
 }
 
-.close-form {
+.submit{
     padding: 10px 15px;
     width: 48%;
     background: #4A90E2;
@@ -191,7 +193,7 @@ h1 {
     transition: background 0.3s ease;
 }
 
-.close-form:hover {
+.submit:hover {
     background: #357ABD;
 }
 
