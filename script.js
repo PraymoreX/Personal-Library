@@ -1,6 +1,6 @@
 let submit = document.querySelector(".submit");
 let background = document.querySelector('.background');
-let bookDetails = document.querySelector("#book-details");
+let bookForm = document.querySelector("#book-form");
 let addBook = document.querySelector("#add-button");
 let cancelBtn = document.querySelector(".cancel");
 let bookTitle = document.querySelector("#title");
@@ -14,22 +14,22 @@ let bookNotRead = document.querySelector("#not-read")
 const myLibrary = [];
 
 window.addEventListener("load", function(){
-  bookDetails.classList.remove("book-details")
+  bookForm.classList.remove("book-details")
 })
 
 addBook.addEventListener("click", function(){
-  bookDetails.classList.add("book-details");
+  bookForm.classList.add("book-details");
   background.style.filter = 'blur(3px)';
 
 });
 
 
 cancelBtn.addEventListener("click", function() {
-  bookDetails.classList.remove("book-details"); 
+  bookForm.classList.remove("book-details"); 
   background.style.filter = 'blur(0px)';
 });
 
-function book(title, author, pages, readStatus){
+function books(title, author, pages, readStatus){
   this.title = title;
   this.author = author;
   this.pages = pages;
@@ -45,26 +45,46 @@ submit.addEventListener("click", function(){
   let title = bookTitle.value;
   let author = bookAuthor.value;
   let pages = bookPages.value;
-  let readStatus = bookRead.checked ? readLabel : notReadLabel;
+  let readStatus = bookRead.checked ? readLabel.textContent : notReadLabel.textContent;
   if (title === '' || author === '' || pages === '') {
     alert('Please fill in all fields');
   } else {
-  const newBook = new book(title, author, pages, readStatus);
+  const newBook = new books(title, author, pages, readStatus);
   myLibrary.push(newBook);
   bookTitle.value = "";
   bookAuthor.value = "";
   bookPages.value = "";
-  bookDetails.classList.remove("book-details"); 
+  bookForm.classList.remove("book-details"); 
   background.style.filter = 'blur(0px)';
   }
   
 });
 console.log(myLibrary);
 
+submit.addEventListener("click", addBookToLibrary);
+
 
 function addBookToLibrary() {
-  // do stuff here
-}
+    const bookCard = document.createElement("div");
+    bookCard.classList.add("book-card");
+      bookCard.innerHTML = `
+      <div id="book-details">
+      <p>Title: ${myLibrary[0].title}</p>
+      <p>Author: ${myLibrary[0].author}</p>
+      <p>Pages: ${myLibrary[0].pages}</p>
+      <p>Status: ${myLibrary[0].readStatus}</p>
+      </div>
+      `
+      background.appendChild(bookCard);
+      myLibrary.shift();
+      const removeButton = document.createElement("button");
+      removeButton.classList.add("remove-button");
+      removeButton.textContent = "Remove Book";
+      removeButton.addEventListener("click", function() {
+          
+      });
+bookCard.appendChild(removeButton);
 
-const biology = new book('mega', 'mega1', 300, 'Have read');
-console.log(biology);
+    }
+      
+
