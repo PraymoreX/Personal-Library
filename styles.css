@@ -46,10 +46,11 @@ main {
     align-items: center;
     padding: 10px 15px; 
     background: linear-gradient(90deg, #4A90E2, #357ABD); 
-    color: white; 
+    color: #5a3d2b; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
     border: none; 
     border-radius: 8px; 
-    font-size: 1em; 
+    font-size: 1.2em; 
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -93,24 +94,54 @@ h1 {
     text-transform: uppercase;
 }
 
+.background{
+   
+display: flex;
+flex-wrap: wrap;
+
+}
+
 
 .add-book {
-    background-color: burlywood; /* Soft gray for a clean look */
+    background-color: burlywood; 
     width: 18%;
     height: 45%;
-    border-radius: 20px; /* Rounded corners for a smoother appearance */
+    border-radius: 20px; 
     border:3px solid white;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 20px 20px;
-    transition: transform 0.2s ease-in-out; /* Animation for a smoother interaction */
+    transition: transform 0.2s ease-in-out; 
 }
 
+.book-card {
+    background-color: burlywood; 
+    width: 18%;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    word-spacing: 4px;
+    font-size: fit-content;
+    max-width: 100%; 
+    white-space: nowrap;
+    overflow: hidden;  
+    color: #5a3d2b;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    height: 45%;
+    border-radius: 20px; 
+    border:3px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px 20px;
+    transition: transform 0.2s ease-in-out; 
+}
 
 .hidden {
     display: none; 
 }
+
+
 
 .book-details {
     position: absolute;
@@ -119,7 +150,7 @@ h1 {
     transform: translate(-50%, -50%);
     width: 20%;
     padding: 20px;
-    background-color: #f9f9f9;
+    background: linear-gradient(135deg, #1e323a, #203A43, #2C5364);
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     display: flex;
@@ -130,8 +161,12 @@ h1 {
 
 .book-details label {
     font-size: 0.9em;
-    color: #555;
+    color: #fff;
     margin-bottom: -2px;
+}
+
+.remove-button{
+    
 }
 
 
