@@ -31,6 +31,7 @@ main {
 .background {
     width: 100%;
     height: 100%;
+    flex-wrap: wrap;
 }
 
 #container {
@@ -54,7 +55,7 @@ main {
     font-weight: bold;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    min-width: 150px;
+    min-width: 50px;
     max-width: 250px;
 }
 
@@ -126,14 +127,16 @@ flex-wrap: wrap;
     white-space: nowrap;
     overflow: hidden;  
     color: #5a3d2b;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    text-shadow: 2px 2px 4px rgba(77, 70, 70, 0.3);
     height: 45%;
     border-radius: 20px; 
     border:3px solid white;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     margin: 20px 20px;
+    font-weight: 700;
     transition: transform 0.2s ease-in-out; 
 }
 
@@ -165,9 +168,6 @@ flex-wrap: wrap;
     margin-bottom: -2px;
 }
 
-.remove-button{
-    
-}
 
 
 .book-details input[type="text"],
@@ -200,6 +200,21 @@ flex-wrap: wrap;
     cursor: pointer;
     transition: background 0.3s ease;
 }
+
+
+.remove-button{
+    padding: 5px 10px;
+    width: fit-content;
+    background: #4A90E2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
 
 .radio-group {
     display: flex;
