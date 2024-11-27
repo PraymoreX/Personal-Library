@@ -9,7 +9,8 @@ let bookPages = document.querySelector("#pages");
 let bookRead = document.querySelector("#read");
 let readLabel = document.querySelector("#read-label");
 let notReadLabel = document.querySelector("#not-read-label")
-let bookNotRead = document.querySelector("#not-read")
+let bookNotRead = document.querySelector("#not-read");
+
 
 const myLibrary = [];
 
@@ -50,7 +51,7 @@ submit.addEventListener("click", function(){
     alert('Please fill in all fields');
   } else {
   const newBook = new books(title, author, pages, readStatus);
-  myLibrary.push(newBook);
+  myLibrary.unshift(newBook);
   bookTitle.value = "";
   bookAuthor.value = "";
   bookPages.value = "";
@@ -59,32 +60,31 @@ submit.addEventListener("click", function(){
   }
   
 });
-console.log(myLibrary);
 
 submit.addEventListener("click", addBookToLibrary);
+removeButton.addEventListener("click", removeBook);
 
 
 function addBookToLibrary() {
     const bookCard = document.createElement("div");
     bookCard.classList.add("book-card");
       bookCard.innerHTML = `
-      <div id="book-details">
       <p>Title: ${myLibrary[0].title}</p>
       <p>Author: ${myLibrary[0].author}</p>
       <p>Pages: ${myLibrary[0].pages}</p>
       <p>Status: ${myLibrary[0].readStatus}</p>
-      </div>
       `
       background.appendChild(bookCard);
-      myLibrary.shift();
       const removeButton = document.createElement("button");
       removeButton.classList.add("remove-button");
-      removeButton.textContent = "Remove Book";
-      removeButton.addEventListener("click", function() {
-          
-      });
-bookCard.appendChild(removeButton);
+      removeButton.textContent = "Remove";
+      bookCard.appendChild(removeButton);
+      removeButton.addEventListener("click", removeBook);
+};
 
-    }
-      
+function removeBook(event){
+  const thisBookCard = event.target.parentElement; 
+  thisBookCard.remove();
 
+
+};
