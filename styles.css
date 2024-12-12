@@ -12,13 +12,9 @@ body{
     margin: 0;
     padding: 0; 
     font-family: Arial, sans-serif;
-    background: url("library.jpg");
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat; 
     height: 100vh; 
     width: 100%; 
-    
+                
 }
 
 
@@ -39,6 +35,9 @@ main {
     width: 100%;
     height: 100%;
     filter: blur(0px);
+    background: linear-gradient(to bottom, #E6F7FF, #FAF3E0);
+    background-size: cover; 
+    background-position: center;
 }
 
 
@@ -47,7 +46,7 @@ main {
     align-items: center;
     padding: 10px 15px; 
     background: linear-gradient(90deg, #4A90E2, #357ABD); 
-    color: #5a3d2b; 
+    color: #fdf7f3; 
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); 
     border: none; 
     border-radius: 8px; 
@@ -79,18 +78,19 @@ button {
 #header{
     width: 100%;
     height: 15%;
-    background: linear-gradient(135deg, #0F2027, #203A43, #2C5364);
+    background-color: #2C5364;
     border: none;
     display: flex;
     justify-content: center ;
     align-items: center;
 }
+
 h1 {
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-weight: bold; 
     font-size: 3em; 
-    color: white;
+    color: yellow;
     letter-spacing: 2px; 
     text-transform: uppercase;
 }
@@ -104,11 +104,11 @@ flex-wrap: wrap;
 
 
 .add-book {
-    background-color: burlywood; 
+    background-color: #F5F5DC; 
     width: 18%;
     height: 45%;
     border-radius: 20px; 
-    border:3px solid white;
+    border:3px solid #D2B48C;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -117,7 +117,7 @@ flex-wrap: wrap;
 }
 
 .book-card {
-    background-color: burlywood; 
+    background-color: #F5F5DC; 
     width: 18%;
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -130,7 +130,7 @@ flex-wrap: wrap;
     text-shadow: 2px 2px 4px rgba(77, 70, 70, 0.3);
     height: 45%;
     border-radius: 20px; 
-    border:3px solid white;
+    border:3px solid #D2B48C;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -151,11 +151,12 @@ flex-wrap: wrap;
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 20%;
+    width: 22%;
     padding: 20px;
-    background: linear-gradient(135deg, #1e323a, #203A43, #2C5364);
+    background: #F5F5DC;
     border-radius: 10px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border:3px solid #8B4513;
     display: flex;
     flex-direction: column;
     gap: 10px; 
@@ -164,7 +165,8 @@ flex-wrap: wrap;
 
 .book-details label {
     font-size: 0.9em;
-    color: #fff;
+    font-weight: bold;
+    color: black;;
     margin-bottom: -2px;
 }
 
@@ -174,10 +176,10 @@ flex-wrap: wrap;
 .book-details input[type="number"]{
     width: 100%;
     padding: 7px;
-    border: 1px solid #ccc;
+    border: 1px solid #350af5;
     border-radius: 5px;
     font-size: 1em;
-    color: #333;
+    color: #0f0f0f;
     background-color: #fff;
 }
 
