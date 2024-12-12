@@ -12,7 +12,7 @@ let notReadLabel = document.querySelector("#not-read-label")
 let bookNotRead = document.querySelector("#not-read");
 
 
-const myLibrary = [];
+let myLibrary = [];
 
 window.addEventListener("load", function(){
   bookForm.classList.remove("book-details")
@@ -28,6 +28,9 @@ addBook.addEventListener("click", function(){
 cancelBtn.addEventListener("click", function() {
   bookForm.classList.remove("book-details"); 
   background.style.filter = 'blur(0px)';
+  bookTitle.value = "";
+  bookAuthor.value = "";
+  bookPages.value = "";
 });
 
 function books(title, author, pages, readStatus){
@@ -49,6 +52,7 @@ submit.addEventListener("click", function(){
   let readStatus = bookRead.checked ? readLabel.textContent : notReadLabel.textContent;
   if (title === '' || author === '' || pages === '') {
     alert('Please fill in all fields');
+    myLibrary = [];
   } else {
   const newBook = new books(title, author, pages, readStatus);
   myLibrary.unshift(newBook);
